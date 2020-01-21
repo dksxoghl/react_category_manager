@@ -3,16 +3,17 @@ import SettingItem from './SettingItem'
 import styled from 'styled-components';
 
 const SettingListC = styled.div`
-width:200px; height:150px; border:1px solid green; float:left;
+width:200px; height:300px; border:1px solid green; float:left;
 `
 
-function SettingList({ category,clicked,clickFalseEvent,a,changeA}) {
+function SettingList({ category,clicked,clickFalseEvent}) {
     // console.log(clicked,'???????????')
     useEffect(()=>{
        
     },[])
     return (
         <SettingListC>
+            <p>진열순서 설정</p>
             {
                 category.map((category) =>
                     (
@@ -26,11 +27,11 @@ function SettingList({ category,clicked,clickFalseEvent,a,changeA}) {
 }
 function areEqual(prevProps,nextProps){
     console.log(prevProps.clicked,'zzzzzzzzzzz',nextProps.clicked);
-    console.log(nextProps.a,'a값')
-        if(nextProps.a===1){ 
-            nextProps.changeA();
-            return false;
-        }
+    // console.log(nextProps.a,'a값')
+    //     if(nextProps.a===1){ 
+    //         nextProps.changeA();
+    //         return false;
+    //     }
         if(!nextProps.clicked){ console.log(nextProps.clicked,' 와이')
             return true;
             

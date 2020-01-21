@@ -2,7 +2,7 @@ import * as category_api from '../api/apiCategory'
 
 const GETLIST = 'GETLIST'
 const SETTRUE = 'SETTRUE'
-
+const CHANGESHOW= 'CHANGESHOW'
 
 export const set_true = (category) => ({
     type: SETTRUE, category
@@ -10,11 +10,24 @@ export const set_true = (category) => ({
 export const category_list = (list) => ({
     type: GETLIST, list
 });
+export const change_show=()=>({
+    type: CHANGESHOW
+})
+
 
 export const getCategory = () => async (dispatch) => {
     try {
         const list = await category_api.getLists(); // API 호출
         dispatch(category_list(list)); // 성공
+        // board_list(list);
+    } catch (e) {
+        console.log(e.message) // 실패
+    }
+};
+export const changeAllShow = (category) => async (dispatch) => {
+    try {
+        const list = await category_api.changeShow(category); // API 호출
+        dispatch(change_show()); // 성공
         // board_list(list);
     } catch (e) {
         console.log(e.message) // 실패
@@ -29,6 +42,7 @@ const initialState = [
 export default function category_reducer(state = initialState, action) {
     switch (action.type) {
         case GETLIST:
+            state=[];
             console.log(state,'겟리스트 호출')
             return state.concat(action.list);
         case SETTRUE:
@@ -46,6 +60,8 @@ export default function category_reducer(state = initialState, action) {
                     show: !action.category.show
                 };
             });
+            case CHANGESHOW:
+                return state;
         default:
             return state;
     }

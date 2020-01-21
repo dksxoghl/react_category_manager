@@ -2,33 +2,38 @@
   "category": [
     {
       "id": 1,
-      "name": "a",
+      "name": "병원리스트",
       "show": true
     },
     {
       "id": 2,
-      "name": "b",
-      "show": false
+      "name": "병원등록",
+      "show": true
     },
     {
       "id": 3,
-      "name": "c",
+      "name": "병원정보관리",
       "show": true
     },
     {
       "id": 4,
-      "name": "d",
+      "name": "병원해지/삭제",
       "show": false
     },
     {
       "id": 5,
-      "name": "e",
+      "name": "의료진리스트",
       "show": true
     },
     {
-      "name": "f",
+      "name": "의료진등록",
       "show": false,
       "id": 6
+    },
+    {
+      "id": 7,
+      "name": "의료진해지/삭제",
+      "show": true
     }
   ]
 }

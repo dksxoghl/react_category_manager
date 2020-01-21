@@ -5,3 +5,11 @@ export const getLists = async () => {
   console.log(response.data,'api~~~~~~~~~~');
   return response.data;
 };
+
+export const changeShow=async(category)=>{
+  await category.map((item,index)=>{
+    console.log(item.id,'과연~~~~~~~~~~~~~~')
+    return axios.patch(`category/${item.id}`,{show:item.show});
+    });
+    return;
+}
