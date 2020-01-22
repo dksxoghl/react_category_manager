@@ -19,7 +19,6 @@ export const getCategory = () => async (dispatch) => {
     try {
         const list = await category_api.getLists(); // API 호출
         dispatch(category_list(list)); // 성공
-        // board_list(list);
     } catch (e) {
         console.log(e.message) // 실패
     }
@@ -28,7 +27,6 @@ export const changeAllShow = (category) => async (dispatch) => {
     try {
         const list = await category_api.changeShow(category); // API 호출
         dispatch(change_show()); // 성공
-        // board_list(list);
     } catch (e) {
         console.log(e.message) // 실패
     }
