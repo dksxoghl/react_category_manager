@@ -47,7 +47,7 @@ export default function category_reducer(state = initialState, action) {
             return state.concat(action.list);
         case SETTRUE:
             // console.log(typeof(state))
-            console.log(state[0])
+            // console.log(state[0])
             // console.log(a,'asdasdasdsadasda',state)
             return state.map((item, index) => {
                 if (index+1 !== action.category.id) {

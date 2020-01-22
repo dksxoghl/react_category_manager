@@ -8,7 +8,6 @@ export const getLists = async () => {
 
 export const changeShow=async(category)=>{
   await category.map((item,index)=>{
-    console.log(item.id,'과연~~~~~~~~~~~~~~')
     return axios.patch(`category/${item.id}`,{show:item.show});
     });
     return;

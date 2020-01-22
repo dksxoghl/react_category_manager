@@ -23,7 +23,7 @@
     {
       "id": 5,
       "name": "의료진리스트",
-      "show": true
+      "show": false
     },
     {
       "name": "의료진등록",

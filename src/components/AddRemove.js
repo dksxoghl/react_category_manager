@@ -11,9 +11,7 @@ function AddRemove({clickEvent}) {
   }
   return (
     <AddC>
-      <p> </p>
-      <p> </p>
-      <p> </p>
+
       <button onClick={handleClick}>>>추가삭제{'<<'}</button>
       {/* <button>삭제{'<<'}</button> */}
     </AddC>
